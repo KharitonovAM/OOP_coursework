@@ -28,3 +28,8 @@ def medprof_test_result():
              'professional_roles': [{'id': '58', 'name': 'Курьер'}], 'accept_incomplete_resumes': True, 'experience': {'id': 'noExperience', 'name': 'Нет опыта'},
              'employment': {'id': 'full', 'name': 'Полная занятость'}, 'employment_form': {'id': 'FULL', 'name': 'Полная'}, 'internship': False,
              'adv_response_url': None, 'is_adv_vacancy': False, 'adv_context': None}]
+
+
+@pytest.fixture
+def json_data_1():
+    return {'gthtvty1': {'1': '2'}, "перемен2":{'3': '4'}}
