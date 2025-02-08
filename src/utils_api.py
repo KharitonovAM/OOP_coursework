@@ -34,6 +34,14 @@ class HH(AbstractHH):
         logging_api.info(f'Инициализации объекта классса HH завершена, параметры {self.params}') #логирование
 
 
+    # def __connection_check(self):
+    #     '''Функция по подключению к серверу проверяет корректность работы API'''
+    #
+    #     logging_api.info('Проверка работоспособности API')  # логирование
+    #     response = requests.get(self.url, headers=self.headers)
+    #     return response.status_code
+
+
     def search_vacancion(self, keyword):
         """Производит поиск на сайте hh.ru вакансий, которые содержат искомый текст"""
 
@@ -57,8 +65,3 @@ class HH(AbstractHH):
         return f'Класс {self.__class__.__name__}, текущие парамметры: {self.params} содержит {len(self.vacancies)} вакансий'
 
 
-if __name__ == '__main__':
-    z = HH()
-    print(z)
-    z.search_vacancion('медпроф')
-    print(z)
