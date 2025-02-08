@@ -4,6 +4,10 @@ import json
 from abc import ABC, abstractmethod
 from setting.setting import FILENAME
 
+
+logging.basicConfig = my_log_config
+# определяем именные логеры
+logging_filename = logging.getLogger("utils_filework")
 class AbsFileWork(ABC):
 
     @abstractmethod
@@ -19,21 +23,27 @@ class FileWork(abstractmethod):
     '''Класс по работе с файлами'''
 
     def __init__(self, filename = FILENAME):
+        logging_filename.info("Старт инициализации")
         """Инициализация объекта который взаимодействует с файлами"""
 
         self.filename = filename
+        logging_filename.info("Завершение инициализации")
 
     def write_data(self, data):
         '''метод который отвечает за внесение данных в json файл'''
 
+        logging_filename.info(f"Пытаемся записать в {self.filename} данные")
         with open(self.filename, 'a') as f:
             json.dump(data, f)
+        logging_filename.info(f"Данные в {self.filename} записаны")
 
 
     def read_data(self):
         '''Метод который отвечает за получение данных из json-файла
          и возвращает полченные значения'''
 
+        logging_filename.info(f"Пытаемся прочитето из {self.filename} данные")
         with open(self.filename, 'r') as f:
             my_data = json.load(f)
+        logging_filename.info(f"Данные из {self.filename} прочитаны")
         return my_data
