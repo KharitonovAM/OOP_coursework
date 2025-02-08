@@ -34,12 +34,10 @@ class HH(AbstractHH):
         logging_api.info(f'Инициализации объекта классса HH завершена, параметры {self.params}') #логирование
 
 
-    # def __connection_check(self):
-    #     '''Функция по подключению к серверу проверяет корректность работы API'''
-    #
-    #     logging_api.info('Проверка работоспособности API')  # логирование
-    #     response = requests.get(self.url, headers=self.headers)
-    #     return response.status_code
+    def __str__(self):
+        """Выыодит на печать информацию об объекте класса HH"""
+        logging_api.info(f'Вызван на печать объект класса {self.__class__.__name__}, текущие парамметры: {self.params} содержит {len(self.vacancies)} вакансий')
+        return f'Класс {self.__class__.__name__}, текущие парамметры: {self.params} содержит {len(self.vacancies)} вакансий'
 
 
     def search_vacancion(self, keyword):
@@ -56,12 +54,13 @@ class HH(AbstractHH):
                 self.params['page'] += 1
             except:
                 print(f'Работа поиска завершена, всего найдено {len(self.vacancies)} вакансий')
-                logging_api.info('Завершена обработка поиска вакансий')
+                logging_api.info('Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий')
                 break
+        return self.vacancies
 
-    def __str__(self):
-        """Выыодит на печать нформацию ою объекте класса HH"""
-        logging_api.info(f'Вызван на печать объект класса {self.__class__.__name__}, текущие парамметры: {self.params} содержит {len(self.vacancies)} вакансий')
-        return f'Класс {self.__class__.__name__}, текущие парамметры: {self.params} содержит {len(self.vacancies)} вакансий'
-
+#
+# if __name__ == '__main__':
+#     z = HH()
+#     l = z.search_vacancion('медпроф')
+#     print(l)
 
