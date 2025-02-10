@@ -58,9 +58,9 @@ class HH(AbstractHH):
                 break
         return self.vacancies
 
-#
-# if __name__ == '__main__':
-#     z = HH()
-#     l = z.search_vacancion('медпроф')
-#     print(l)
+
+if __name__ == '__main__':
+    z = HH()
+    l = z.search_vacancion('медпроф')
+    print(l[0])
 
