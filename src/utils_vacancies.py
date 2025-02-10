@@ -59,8 +59,11 @@ class Vacancies:
         если данных нет, или они не относится к ччиловому формату - ставит 0,
         если данные ниже нуля, так же заменяет на 0 значение'''
 
-        vacancy_log.info(f'Старт валидации запрлаты по нижнему значение, на входе равно {self.salary['from']}')
-        if isinstance(self.salary['from'], (float, int)) is False or self.salary['from'] < 0:
+        vacancy_log.info('Старт валидации запрлаты по нижнему значение}')
+        try:
+            if isinstance(self.salary['from'], (float, int)) is False or self.salary['from'] < 0:
+                self.salary['from'] = 0
+        except:
             self.salary['from'] = 0
         vacancy_log.info(f'Валидация запрлаты по нижнему значению проведена, по выходу {self.salary['from']}')
 
@@ -69,25 +72,27 @@ class Vacancies:
         если значения нет, оно не ччисловое или меньше нижнего предела
         - возвращает значение нижнего предела'''
 
-        vacancy_log.info(f'Старт валидации запрлаты по верхнему значению, на входе равно {self.salary['to']}')
-        if isinstance(self.salary['to'], (float, int)) is False or self.salary['to'] < self.salary['from']:
+        vacancy_log.info('Старт валидации запрлаты по верхнему значению')
+        try:
+            if isinstance(self.salary['to'], (float, int)) is False or self.salary['to'] < self.salary['from']:
+                self.salary['to'] = self.salary['from']
+        except:
             self.salary['to'] = self.salary['from']
         vacancy_log.info(f'Валидация запрлаты по верхнему значению проведена, по выходу {self.salary['to']}')
 
-
-    def check_object_class(self, test_object):
+    @staticmethod
+    def check_object_class(test_object):
         """Проверяет принадлежность объекта к классу Вакансии и возбуждает исключение если объект не соответствует классу"""
 
-        try:
-            isinstance(test_object, self.__class__.__name__)
-        except Exception as e:
-            print('Выбран объект не подходящего классса')
+        if isinstance(test_object, Vacancies) is False:
+            raise TypeError('Выбран объект не подходящего классса')
 
 
     def compare_jobs(self, vac2):
         '''Принимает две объекта класса вакансии и возвращает ту. у которой более высокая максмальная зарплата'''
 
-        self.check_object_class(vac2)
+        Vacancies.check_object_class(vac2)
+        print('qqq')
         if max(self.salary['to'], vac2.salary['to']) == self.salary['to'] : return self
         elif max(self.salary['to'], vac2.salary['to']) == vac2.salary['to'] : return vac2
         elif max(self.salary['from'], vac2.salary['from']) == vac2.salary['from'] : return vac2

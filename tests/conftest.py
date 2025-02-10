@@ -1,5 +1,5 @@
 import pytest
-from src.utils_api import HH
+from src.utils_vacancies import Vacancies
 
 @pytest.fixture
 def medprof_test_result():
@@ -33,3 +33,16 @@ def medprof_test_result():
 @pytest.fixture
 def json_data_1():
     return {'gthtvty1': {'1': '2'}, "перемен2":{'3': '4'}}
+
+@pytest.fixture
+def vac1():
+    return Vacancies('тестовая вакансия', 'adress', {'from':150000, 'to':300000}, 'http://myurl.com','daily')
+
+
+@pytest.fixture
+def vac2():
+    return Vacancies('тестовая вакансия', 'adress', {'from':100000, 'to':300000}, 'http://myurl.com','daily')
+
+@pytest.fixture
+def vac3():
+    return Vacancies('тестовая вакансия', 'adress', {'from':100000, 'to':200000}, 'http://myurl.com','daily')
