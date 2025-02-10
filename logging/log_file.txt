@@ -1,149 +1,149 @@
-2025-02-10 17:57:25,777 - INFO- api_utils - Старт инициализации объекта классса HH
-2025-02-10 17:57:25,779 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
-2025-02-10 17:57:25,779 - INFO- api_utils - Старт сбора вакансий по тексту Медпроф
-2025-02-10 17:57:25,779 - INFO- api_utils - Проводим подклчение к серверу
-2025-02-10 17:57:25,783 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:26,384 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies HTTP/1.1" 200 None
-2025-02-10 17:57:26,388 - INFO- api_utils - Ответ полученный от сервера имеет код 200
-2025-02-10 17:57:26,389 - INFO- api_utils - Обработали информацию по странице № 0
-2025-02-10 17:57:26,391 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:26,717 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=0&per_page=100 HTTP/1.1" 200 None
-2025-02-10 17:57:26,725 - INFO- api_utils - Обработали информацию по странице № 1
-2025-02-10 17:57:26,727 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:27,152 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=1&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:27,156 - INFO- api_utils - Обработали информацию по странице № 2
-2025-02-10 17:57:27,158 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:27,462 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=2&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:27,467 - INFO- api_utils - Обработали информацию по странице № 3
-2025-02-10 17:57:27,469 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:27,762 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=3&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:27,766 - INFO- api_utils - Обработали информацию по странице № 4
-2025-02-10 17:57:27,768 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:27,987 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=4&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:27,992 - INFO- api_utils - Обработали информацию по странице № 5
-2025-02-10 17:57:27,995 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:28,226 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=5&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:28,231 - INFO- api_utils - Обработали информацию по странице № 6
-2025-02-10 17:57:28,233 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:28,442 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=6&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:28,446 - INFO- api_utils - Обработали информацию по странице № 7
-2025-02-10 17:57:28,448 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:28,672 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=7&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:28,677 - INFO- api_utils - Обработали информацию по странице № 8
-2025-02-10 17:57:28,680 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:28,970 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=8&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:28,973 - INFO- api_utils - Обработали информацию по странице № 9
-2025-02-10 17:57:28,975 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:29,188 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=9&per_page=100 HTTP/1.1" 200 295
-2025-02-10 17:57:29,192 - INFO- api_utils - Обработали информацию по странице № 10
-2025-02-10 17:57:29,196 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:29,698 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=10&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:29,701 - INFO- api_utils - Обработали информацию по странице № 11
-2025-02-10 17:57:29,704 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:29,961 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=11&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:29,965 - INFO- api_utils - Обработали информацию по странице № 12
-2025-02-10 17:57:29,969 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:30,188 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=12&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:30,192 - INFO- api_utils - Обработали информацию по странице № 13
-2025-02-10 17:57:30,194 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:30,442 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=13&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:30,446 - INFO- api_utils - Обработали информацию по странице № 14
-2025-02-10 17:57:30,449 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:30,673 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=14&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:30,677 - INFO- api_utils - Обработали информацию по странице № 15
-2025-02-10 17:57:30,679 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:30,924 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=15&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:30,929 - INFO- api_utils - Обработали информацию по странице № 16
-2025-02-10 17:57:30,932 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:31,161 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=16&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:31,165 - INFO- api_utils - Обработали информацию по странице № 17
-2025-02-10 17:57:31,167 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:31,409 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=17&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:31,413 - INFO- api_utils - Обработали информацию по странице № 18
-2025-02-10 17:57:31,415 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:31,715 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=18&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:31,720 - INFO- api_utils - Обработали информацию по странице № 19
-2025-02-10 17:57:31,723 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:31,958 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=19&per_page=100 HTTP/1.1" 200 297
-2025-02-10 17:57:31,962 - INFO- api_utils - Обработали информацию по странице № 20
-2025-02-10 17:57:31,963 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
-2025-02-10 17:57:32,188 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=20&per_page=100 HTTP/1.1" 400 352
-2025-02-10 17:57:32,192 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
-2025-02-10 17:57:32,218 - INFO- api_utils - Старт инициализации объекта классса HH
-2025-02-10 17:57:32,218 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
-2025-02-10 17:57:32,218 - INFO- api_utils - Вызван на печать объект класса HH, текущие парамметры: {'text': '', 'page': 0, 'per_page': 100} содержит 0 вакансий
-2025-02-10 17:57:32,222 - INFO- api_utils - Старт инициализации объекта классса HH
-2025-02-10 17:57:32,223 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
-2025-02-10 17:57:32,223 - INFO- api_utils - Старт сбора вакансий по тексту looking
-2025-02-10 17:57:32,223 - INFO- api_utils - Проводим подклчение к серверу
-2025-02-10 17:57:32,223 - INFO- api_utils - Ответ полученный от сервера имеет код 200
-2025-02-10 17:57:32,223 - INFO- api_utils - Обработали информацию по странице № 0
-2025-02-10 17:57:32,223 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
-2025-02-10 17:57:32,229 - INFO- utils_filework - Старт инициализации
-2025-02-10 17:57:32,229 - INFO- utils_filework - Завершение инициализации
-2025-02-10 17:57:32,229 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
-2025-02-10 17:57:32,231 - INFO- utils_filework - Данные из mydata.json прочитаны
-2025-02-10 17:57:32,232 - INFO- utils_filework - Старт инициализации
-2025-02-10 17:57:32,233 - INFO- utils_filework - Завершение инициализации
-2025-02-10 17:57:32,233 - INFO- utils_filework - Пытаемся записать в mydata.json данные
-2025-02-10 17:57:32,233 - INFO- utils_filework - Данные в mydata.json записаны
-2025-02-10 17:57:32,239 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,239 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,239 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
-2025-02-10 17:57:32,240 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,240 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,240 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,242 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,242 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,242 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
-2025-02-10 17:57:32,242 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,242 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,243 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,245 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,246 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,246 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-02-10 17:57:32,246 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,246 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,246 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,249 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': -1, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,249 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,249 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
-2025-02-10 17:57:32,249 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,249 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,249 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,251 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,252 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,252 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
-2025-02-10 17:57:32,252 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,252 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,252 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,254 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': '300000'}, http://myurl.com, daily
-2025-02-10 17:57:32,254 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,254 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
-2025-02-10 17:57:32,254 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,254 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 100000
-2025-02-10 17:57:32,254 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,256 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 500000, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,257 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,257 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 500000
-2025-02-10 17:57:32,257 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,257 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 500000
-2025-02-10 17:57:32,257 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,260 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,260 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,260 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,260 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,260 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,260 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
-2025-02-10 17:57:32,262 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
-2025-02-10 17:57:32,262 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
-2025-02-10 17:57:32,262 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
-2025-02-10 17:57:32,262 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
-2025-02-10 17:57:32,262 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
-2025-02-10 17:57:32,262 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:51:55,388 - INFO- api_utils - Старт инициализации объекта классса HH
+2025-02-10 18:51:55,389 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
+2025-02-10 18:51:55,389 - INFO- api_utils - Старт сбора вакансий по тексту Медпроф
+2025-02-10 18:51:55,389 - INFO- api_utils - Проводим подклчение к серверу
+2025-02-10 18:51:55,393 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:55,803 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies HTTP/1.1" 200 None
+2025-02-10 18:51:55,808 - INFO- api_utils - Ответ полученный от сервера имеет код 200
+2025-02-10 18:51:55,809 - INFO- api_utils - Обработали информацию по странице № 0
+2025-02-10 18:51:55,811 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:56,158 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=0&per_page=100 HTTP/1.1" 200 None
+2025-02-10 18:51:56,163 - INFO- api_utils - Обработали информацию по странице № 1
+2025-02-10 18:51:56,164 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:56,477 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=1&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:56,481 - INFO- api_utils - Обработали информацию по странице № 2
+2025-02-10 18:51:56,483 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:56,749 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=2&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:56,753 - INFO- api_utils - Обработали информацию по странице № 3
+2025-02-10 18:51:56,755 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:57,012 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=3&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:57,018 - INFO- api_utils - Обработали информацию по странице № 4
+2025-02-10 18:51:57,021 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:57,234 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=4&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:57,238 - INFO- api_utils - Обработали информацию по странице № 5
+2025-02-10 18:51:57,239 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:57,463 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=5&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:57,468 - INFO- api_utils - Обработали информацию по странице № 6
+2025-02-10 18:51:57,471 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:57,707 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=6&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:57,709 - INFO- api_utils - Обработали информацию по странице № 7
+2025-02-10 18:51:57,710 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:57,948 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=7&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:57,952 - INFO- api_utils - Обработали информацию по странице № 8
+2025-02-10 18:51:57,953 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:58,171 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=8&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:58,175 - INFO- api_utils - Обработали информацию по странице № 9
+2025-02-10 18:51:58,178 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:58,426 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=9&per_page=100 HTTP/1.1" 200 295
+2025-02-10 18:51:58,431 - INFO- api_utils - Обработали информацию по странице № 10
+2025-02-10 18:51:58,434 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:58,658 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=10&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:51:58,660 - INFO- api_utils - Обработали информацию по странице № 11
+2025-02-10 18:51:58,662 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:58,906 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=11&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:51:58,907 - INFO- api_utils - Обработали информацию по странице № 12
+2025-02-10 18:51:58,909 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:59,138 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=12&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:51:59,142 - INFO- api_utils - Обработали информацию по странице № 13
+2025-02-10 18:51:59,143 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:59,353 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=13&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:51:59,357 - INFO- api_utils - Обработали информацию по странице № 14
+2025-02-10 18:51:59,360 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:59,562 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=14&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:51:59,566 - INFO- api_utils - Обработали информацию по странице № 15
+2025-02-10 18:51:59,567 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:51:59,806 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=15&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:51:59,810 - INFO- api_utils - Обработали информацию по странице № 16
+2025-02-10 18:51:59,811 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:52:00,091 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=16&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:52:00,093 - INFO- api_utils - Обработали информацию по странице № 17
+2025-02-10 18:52:00,094 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:52:00,323 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=17&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:52:00,327 - INFO- api_utils - Обработали информацию по странице № 18
+2025-02-10 18:52:00,329 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:52:00,623 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=18&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:52:00,627 - INFO- api_utils - Обработали информацию по странице № 19
+2025-02-10 18:52:00,629 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:52:00,885 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=19&per_page=100 HTTP/1.1" 200 297
+2025-02-10 18:52:00,889 - INFO- api_utils - Обработали информацию по странице № 20
+2025-02-10 18:52:00,893 - DEBUG- urllib3.connectionpool - Starting new HTTPS connection (1): api.hh.ru:443
+2025-02-10 18:52:01,060 - DEBUG- urllib3.connectionpool - https://api.hh.ru:443 "GET /vacancies?text=%D0%9C%D0%B5%D0%B4%D0%BF%D1%80%D0%BE%D1%84&page=20&per_page=100 HTTP/1.1" 400 352
+2025-02-10 18:52:01,066 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
+2025-02-10 18:52:01,091 - INFO- api_utils - Старт инициализации объекта классса HH
+2025-02-10 18:52:01,091 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
+2025-02-10 18:52:01,091 - INFO- api_utils - Вызван на печать объект класса HH, текущие парамметры: {'text': '', 'page': 0, 'per_page': 100} содержит 0 вакансий
+2025-02-10 18:52:01,095 - INFO- api_utils - Старт инициализации объекта классса HH
+2025-02-10 18:52:01,095 - INFO- api_utils - Инициализации объекта классса HH завершена, параметры {'text': '', 'page': 0, 'per_page': 100}
+2025-02-10 18:52:01,096 - INFO- api_utils - Старт сбора вакансий по тексту looking
+2025-02-10 18:52:01,096 - INFO- api_utils - Проводим подклчение к серверу
+2025-02-10 18:52:01,096 - INFO- api_utils - Ответ полученный от сервера имеет код 200
+2025-02-10 18:52:01,096 - INFO- api_utils - Обработали информацию по странице № 0
+2025-02-10 18:52:01,096 - INFO- api_utils - Завершена обработка поиска вакансий, всего найдено {len(self.vacancies)} вакансий
+2025-02-10 18:52:01,103 - INFO- utils_filework - Старт инициализации
+2025-02-10 18:52:01,104 - INFO- utils_filework - Завершение инициализации
+2025-02-10 18:52:01,104 - INFO- utils_filework - Пытаемся прочитето из mydata.json данные
+2025-02-10 18:52:01,104 - INFO- utils_filework - Данные из mydata.json прочитаны
+2025-02-10 18:52:01,106 - INFO- utils_filework - Старт инициализации
+2025-02-10 18:52:01,107 - INFO- utils_filework - Завершение инициализации
+2025-02-10 18:52:01,107 - INFO- utils_filework - Пытаемся записать в mydata.json данные
+2025-02-10 18:52:01,107 - INFO- utils_filework - Данные в mydata.json записаны
+2025-02-10 18:52:01,112 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,112 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,113 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
+2025-02-10 18:52:01,113 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,113 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,113 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,115 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,115 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,116 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,117 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,119 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,119 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,119 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-02-10 18:52:01,119 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,119 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,119 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,122 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': -1, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,122 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,122 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
+2025-02-10 18:52:01,122 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,122 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,122 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,125 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,125 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,125 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 0
+2025-02-10 18:52:01,125 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,125 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,125 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,127 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 100000, 'to': '300000'}, http://myurl.com, daily
+2025-02-10 18:52:01,127 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,127 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 100000
+2025-02-10 18:52:01,128 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,128 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 100000
+2025-02-10 18:52:01,128 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,131 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 500000, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,131 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,131 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 500000
+2025-02-10 18:52:01,132 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,132 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 500000
+2025-02-10 18:52:01,132 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,134 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,134 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,134 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,134 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,134 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,134 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies
+2025-02-10 18:52:01,136 - INFO- vacancy_modul_log - Старт инициализации объекта класса Vacancies c входными данными тестовая вакансия, adress, {'from': 150000, 'to': 300000}, http://myurl.com, daily
+2025-02-10 18:52:01,136 - INFO- vacancy_modul_log - Старт валидации запрлаты по нижнему значение}
+2025-02-10 18:52:01,136 - INFO- vacancy_modul_log - Валидация запрлаты по нижнему значению проведена, по выходу 150000
+2025-02-10 18:52:01,136 - INFO- vacancy_modul_log - Старт валидации запрлаты по верхнему значению
+2025-02-10 18:52:01,136 - INFO- vacancy_modul_log - Валидация запрлаты по верхнему значению проведена, по выходу 300000
+2025-02-10 18:52:01,136 - INFO- vacancy_modul_log - Завершена инициализация объекта класса Vacancies

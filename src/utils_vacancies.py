@@ -36,6 +36,7 @@ class abstract_vacancies(ABC):
 class Vacancies:
     '''Класс для работы с объектами вакансий'''
     vacancies_object_list = []
+    __slots__ = ('name', 'address', 'salary', 'vacancies_url', 'work_format')
 
     def __init__(self, name, address, salary, vacancies_url, work_format):
         """Инициализация объекта класса Vacancies"""
@@ -44,8 +45,8 @@ class Vacancies:
         self.name = name
         self.address = address
         self.salary = salary
-        self.validation_solary_vacancy_from()
-        self.validation_solary_vacancy_to()
+        self.__validation_solary_vacancy_from()
+        self.__validation_solary_vacancy_to()
         self.vacancies_url = vacancies_url
         self.work_format = work_format
         vacancy_log.info('Завершена инициализация объекта класса Vacancies')
@@ -54,7 +55,14 @@ class Vacancies:
         '''метод который определяет результат функции print для объекта классса Vacancies'''
         return f'Объект класса Vacancies {self.name}, {self.address}, {self.salary}, {self.vacancies_url}, {self.work_format} '
 
-    def validation_solary_vacancy_from(self):
+    def __sub__(self, vac2):
+        '''Магический метод вычитания двух вакансий'''
+
+        if self.salary['to'] != vac2.salary['to']: return self.salary['to'] - vac2.salary['to']
+        elif self.salary['from'] != vac2.salary['from']: return self.salary['from'] - vac2.salary['from']
+        else: return 0
+
+    def __validation_solary_vacancy_from(self):
         '''Валидирует значение зарплаты указанное в ваканссии по нижнему критерию.
         если данных нет, или они не относится к ччиловому формату - ставит 0,
         если данные ниже нуля, так же заменяет на 0 значение'''
@@ -67,7 +75,7 @@ class Vacancies:
             self.salary['from'] = 0
         vacancy_log.info(f'Валидация запрлаты по нижнему значению проведена, по выходу {self.salary['from']}')
 
-    def validation_solary_vacancy_to(self):
+    def __validation_solary_vacancy_to(self):
         '''Валидирует значение зарплаты по вверхнему пределу
         если значения нет, оно не ччисловое или меньше нижнего предела
         - возвращает значение нижнего предела'''
@@ -92,10 +100,8 @@ class Vacancies:
         '''Принимает две объекта класса вакансии и возвращает ту. у которой более высокая максмальная зарплата'''
 
         Vacancies.check_object_class(vac2)
-        print('qqq')
-        if max(self.salary['to'], vac2.salary['to']) == self.salary['to'] : return self
-        elif max(self.salary['to'], vac2.salary['to']) == vac2.salary['to'] : return vac2
-        elif max(self.salary['from'], vac2.salary['from']) == vac2.salary['from'] : return vac2
-        elif max(self.salary['from'], vac2.salary['from']) == self.salary['from'] : return self
-        print('Обе вакансии равнознчные по зарплатным условиям, поэтому оставили как есть')
-        return self
+        if self - vac2 > 0: return self
+        elif self - vac2 < 0: return vac2
+        else:
+            print('Обе вакансии равнознчные по зарплатным условиям, поэтому оставили как есть')
+            return self
