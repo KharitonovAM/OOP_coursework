@@ -76,7 +76,3 @@ class HH(AbstractHH):
         else:
             print(f'Обнаружена ошибка при подлючении к серверу, код ошибки: {self.__connection()}')
             logging_api.error(f'Обнаружена ошибка при подлючении к серверу, код ошибки: {self.__connection()}')
-
-z =HH()
-print(z.search_vacancion('Медпроф'))
-

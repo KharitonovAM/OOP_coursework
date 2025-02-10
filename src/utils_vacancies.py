@@ -68,8 +68,13 @@ class Vacancies:
         если данные ниже нуля, так же заменяет на 0 значение'''
 
         vacancy_log.info('Старт валидации запрлаты по нижнему значение}')
+
+        if isinstance(self.salary, dict) is False:
+            self.salary = {'from': 0, 'to': 0}
         try:
-            if isinstance(self.salary['from'], (float, int)) is False or self.salary['from'] < 0:
+            if isinstance(self.salary['from'], (float, int)) and self.salary['from'] > 0:
+                pass
+            else:
                 self.salary['from'] = 0
         except:
             self.salary['from'] = 0
@@ -82,7 +87,9 @@ class Vacancies:
 
         vacancy_log.info('Старт валидации запрлаты по верхнему значению')
         try:
-            if isinstance(self.salary['to'], (float, int)) is False or self.salary['to'] < self.salary['from']:
+            if isinstance(self.salary['to'], (float, int)) and self.salary['to'] >= self.salary['from']:
+                pass
+            else:
                 self.salary['to'] = self.salary['from']
         except:
             self.salary['to'] = self.salary['from']

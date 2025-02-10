@@ -1,5 +1,6 @@
 import logging
 import json
+import os
 
 from abc import ABC, abstractmethod
 from setting.setting import DATA_FILENAME
@@ -20,31 +21,66 @@ class AbsFileWork(ABC):
         pass
 
 
+    @abstractmethod
+    def deldata(self):
+        pass
+
+
 class FileWork(AbsFileWork):
     '''Класс по работе с файлами'''
 
-    def __init__(self, filename = DATA_FILENAME):
+    def __init__(self, filename=DATA_FILENAME):
         logging_filename.info("Старт инициализации")
         """Инициализация объекта который взаимодействует с файлами"""
 
-        self.filename = filename
+        self.__filename = filename
         logging_filename.info("Завершение инициализации")
 
     def write_data(self, data):
         '''метод который отвечает за внесение данных в json файл'''
 
-        logging_filename.info(f"Пытаемся записать в {self.filename} данные")
-        with open(self.filename, 'w') as f:
-            json.dump(data, f)
-        logging_filename.info(f"Данные в {self.filename} записаны")
+        logging_filename.info(f"Пытаемся записать в {self.__filename} данные")
+
+        try:
+            data_from_file = self.take_data()
+            data_from_file.extend(data)
+        except:
+            data_from_file = data
+        with open(self.__filename, 'w') as f:
+            json.dump(data_from_file, f, indent=4, ensure_ascii=True)
+        logging_filename.info(f"Данные в {self.__filename} записаны")
 
 
     def take_data(self):
         '''Метод который отвечает за получение данных из json-файла
          и возвращает полченные значения'''
 
-        logging_filename.info(f"Пытаемся прочитето из {self.filename} данные")
-        with open(self.filename, 'r') as f:
+        logging_filename.info(f"Пытаемся прочитето из {self.__filename} данные")
+        with open(self.__filename) as f:
             my_data = json.load(f)
-        logging_filename.info(f"Данные из {self.filename} прочитаны")
+            logging_filename.info(f"Данные из {self.__filename} прочитаны")
         return my_data
+
+
+    def deldata(self, data_to_del):
+        '''Метод для удаления данных в файле'''
+
+        temp_data = self.take_data()
+        if data_to_del in temp_data:
+            print(temp_data)
+            temp_data.remove(data_to_del)
+            print(2222, temp_data)
+
+        with open(self.__filename, 'w') as f:
+            json.dump(temp_data, f, ensure_ascii=True)
+
+
+    def add_new_vacancy_to_json_file(self, vac_data):
+        """Модуль добавляющий данные по новой вакансии в файл,
+        если данных по этой ваканссии ранее н было добавлено"""
+
+        temp_data = self.take_data()
+        if vac_data[0] not in temp_data:
+            self.write_data(vac_data)
+        else:
+            print('Эта вакансия уже имеется в файле')

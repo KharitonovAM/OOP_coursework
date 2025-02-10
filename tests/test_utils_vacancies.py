@@ -74,7 +74,7 @@ def test_valifashion_vacansii_from_not_digit():
     '''тестируем, что при инициализации объекта класса Vacansy
     происходит валидация данных'''
 
-    test_vacancy = Vacancies('тестовая вакансия', 'adress', {'from': 100000, 'to': '300000'}, 'http://myurl.com', 'daily')
+    test_vacancy = Vacancies('тестовая вакансия', 'adress', {'from': 100000, 'to': 'ghjhghg'}, 'http://myurl.com', 'daily')
     assert test_vacancy.salary['from'] == 100000
 
 

@@ -32,7 +32,7 @@ def medprof_test_result():
 
 @pytest.fixture
 def json_data_1():
-    return {'gthtvty1': {'1': '2'}, "перемен2":{'3': '4'}}
+    return [{'gthtvty1': {'1': '2'}, "перемен2":{'3': '4'}}]
 
 @pytest.fixture
 def vac1():
@@ -46,3 +46,11 @@ def vac2():
 @pytest.fixture
 def vac3():
     return Vacancies('тестовая вакансия', 'adress', {'from':100000, 'to':200000}, 'http://myurl.com','daily')
+
+@pytest.fixture
+def json_data_2():
+    return [{"ghb": {1: 22}, "перемен2":{4: 5}}, {"gg": 2, "4": 14}]
+
+@pytest.fixture
+def json_data_3():
+    return [{'ghb': {'1': 22}, 'перемен2': {'4': 5}}, {'4': 14, 'gg': 2}]
