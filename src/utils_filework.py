@@ -53,7 +53,7 @@ class FileWork(AbsFileWork):
         logging_filename.info(f"Данные в {self.__filename} записаны")
 
 
-    def take_data(self) -> list[dict[Any, Any]] -> list[dict[Any, Any]]:
+    def take_data(self) -> list[dict[Any, Any]]:
         '''Метод который отвечает за получение данных из json-файла
          и возвращает полченные значения'''
 

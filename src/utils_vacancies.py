@@ -58,7 +58,7 @@ class Vacancies:
         '''метод который определяет результат функции print для объекта классса Vacancies'''
         return f'Объект класса Vacancies {self.name}, {self.address}, {self.salary}, {self.vacancies_url}, {self.work_format} '
 
-    def __sub__(self, vac2: Vacancies) -> int :
+    def __sub__(self, vac2) -> int :
         '''Магический метод вычитания двух вакансий'''
 
         if self.salary['to'] != vac2.salary['to']: return self.salary['to'] - vac2.salary['to']
@@ -106,7 +106,7 @@ class Vacancies:
             raise TypeError('Выбран объект не подходящего классса')
 
 
-    def compare_jobs(self, vac2: Vacancies) ->Vacancies:
+    def compare_jobs(self, vac2):
         '''Принимает две объекта класса вакансии и возвращает ту. у которой более высокая максмальная зарплата'''
 
         Vacancies.check_object_class(vac2)
