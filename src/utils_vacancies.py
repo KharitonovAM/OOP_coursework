@@ -1,8 +1,8 @@
 import logging
 from abc import ABC, abstractmethod
-from setting.log_setting import my_log_config
 from typing import Any, Union
 
+from setting.log_setting import my_log_config
 
 logging.basicConfig = my_log_config
 vacancy_log = logging.getLogger("vacancy_modul_log")

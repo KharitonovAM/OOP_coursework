@@ -1,5 +1,6 @@
-from src.utils_vacancies import Vacancies
 from typing import Any
+
+from src.utils_vacancies import Vacancies
 
 
 class DataWork:

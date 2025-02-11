@@ -1,7 +1,9 @@
+from typing import Any
+
 import pytest
+
 from src.oter_utils import DataWork
 from src.utils_vacancies import Vacancies
-from typing import Any
 
 
 def test_sort_vacancies(vac_list: list[Vacancies]):

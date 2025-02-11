@@ -1,9 +1,9 @@
-import requests
 import logging
 from abc import ABC, abstractmethod
 
-from setting.log_setting import my_log_config
+import requests
 
+from setting.log_setting import my_log_config
 
 logging.basicConfig = my_log_config
 # определяем именные логеры

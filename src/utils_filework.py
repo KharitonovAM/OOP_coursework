@@ -1,13 +1,12 @@
-import logging
 import json
+import logging
 import os
-
 from abc import ABC, abstractmethod
 from typing import Any
-from setting.setting import DATA_FILENAME
-from setting.log_setting import my_log_config
-from src.utils_vacancies import Vacancies
 
+from setting.log_setting import my_log_config
+from setting.setting import DATA_FILENAME
+from src.utils_vacancies import Vacancies
 
 logging.basicConfig = my_log_config
 # определяем именные логеры

@@ -1,7 +1,7 @@
-from src.utils_vacancies import Vacancies
+from src.oter_utils import DataWork
 from src.utils_api import HH
 from src.utils_filework import FileWork
-from src.oter_utils import DataWork
+from src.utils_vacancies import Vacancies
 
 
 def main() -> None:
