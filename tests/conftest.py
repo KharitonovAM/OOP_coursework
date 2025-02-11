@@ -54,3 +54,37 @@ def json_data_2():
 @pytest.fixture
 def json_data_3():
     return [{'ghb': {'1': 22}, 'перемен2': {'4': 5}}, {'4': 14, 'gg': 2}]
+
+@pytest.fixture
+def vac_list():
+    data_list = [Vacancies('3', '3', {'from': 3, 'to': 3}, 'http://myurl.com', 'daily'),
+    Vacancies('4', '4', {'from': 4, 'to': 4}, 'http://myurl.com', 'daily'),
+    Vacancies('1', '1', {'from': 1, 'to': 1}, 'http://myurl.com', 'daily'),
+    Vacancies('2', '2', {'from': 2, 'to': 2}, 'http://myurl.com', 'daily'),
+    Vacancies('5', '5', {'from': 5, 'to': 5}, 'http://myurl.com', 'daily')]
+    return data_list
+
+
+@pytest.fixture
+def examle_from_hh():
+    return [
+        {
+        "name": "ghb",
+        "address": {
+            "city": "street"
+        },
+        "salary": {
+            'from': 15,
+            'to': 15000
+        },
+        "alternate_url": {
+            'raw': 'http'
+        },
+        "work_schedule_by_days": [
+            {
+                "id": "OTHER",
+                "name": "all free days"
+            }
+        ]
+    }
+    ]
