@@ -14,3 +14,9 @@ class DataWork():
     def make_vacancy_object(self, vacation_data):
         '''Формирует объект класса вакансии из списка полученного чрез API'''
         return Vacancies(vacation_data['name'], vacation_data['address'], vacation_data['salary'], vacation_data['alternate_url'], vacation_data['work_schedule_by_days'])
+
+    def make_data_to_json_from_vacancy_object_list(self, vacancy_list):
+        '''Формирует спиисок с данными подходящими для записи в json файл из
+        списка объектов класса Json'''
+
+        return [{'name': x.name, 'address': x.address, 'salary':x.address, 'alternate_url':x.address, 'work_schedule_by_days':x.work_format} for x in vacancy_list]
