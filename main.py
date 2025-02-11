@@ -4,7 +4,7 @@ from src.utils_filework import FileWork
 from src.oter_utils import DataWork
 
 
-def main():
+def main() -> None:
     '''Функция отвечающая за взаимодействие с пользователем'''
 
     other_functions = DataWork()
@@ -43,7 +43,7 @@ def main():
         number_vacancies = input('''Какое количество вакансий вы хотите просмотреть?
          Если хотите просмотреть все вакансии - введите любой нечисловой символ\n''')
         print('number_vacancies---',number_vacancies)
-        if number_vacancies.isdigit() is False or number_vacancies < 0 or number_vacancies > len(sorted_vacancy_list):
+        if number_vacancies.isdigit() is False or int(number_vacancies) < 0 or int(number_vacancies) > len(vacansy_object_list):
             number_vacancies = len(vacansy_object_list)
         vacansy_object_list = vacansy_object_list[:number_vacancies]
         print_before_saving = input('Вывести список на экран? (Y/N)')
@@ -57,8 +57,3 @@ def main():
         data_at_json_format = other_functions.make_data_to_json_from_vacancy_object_list(vacansy_object_list)
         filework.write_data(data_at_json_format)
         input('Данные записаны в файл, для продолжения работы нажмите любую клавишу')
-
-
-
-if __name__ == "__main__":
-    main()

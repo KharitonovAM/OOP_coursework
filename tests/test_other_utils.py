@@ -1,8 +1,9 @@
 import pytest
 from src.oter_utils import DataWork
 from src.utils_vacancies import Vacancies
+from typing import Any
 
-def test_sort_vacancies(vac_list):
+def test_sort_vacancies(vac_list:list[Vacancies]):
     '''Тест проверяет что функция получив список из вакансий вернёт его отсортированного по зарплате по убыванию'''
 
     test_data = DataWork()
@@ -13,7 +14,7 @@ def test_sort_vacancies(vac_list):
     assert sorted_list[3] == vac_list[3]
 
 
-def test_make_vacancy_object(examle_from_hh):
+def test_make_vacancy_object(examle_from_hh: list[dict[Any, Any]]):
     '''Тест который проверет что функция создаёт список объектов Вакансии
     принимая на вход json-data из hh'''
 

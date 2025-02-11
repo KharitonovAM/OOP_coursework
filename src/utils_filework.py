@@ -3,8 +3,10 @@ import json
 import os
 
 from abc import ABC, abstractmethod
+from typing import Any
 from setting.setting import DATA_FILENAME
 from setting.log_setting import my_log_config
+from src.utils_vacancies import Vacancies
 
 
 logging.basicConfig = my_log_config
@@ -13,30 +15,30 @@ logging_filename = logging.getLogger("utils_filework")
 class AbsFileWork(ABC):
 
     @abstractmethod
-    def take_data(self):
+    def take_data(self)->None:
         pass
 
     @abstractmethod
-    def write_data(self):
+    def write_data(self)->None:
         pass
 
 
     @abstractmethod
-    def deldata(self):
+    def deldata(self)->None:
         pass
 
 
 class FileWork(AbsFileWork):
     '''Класс по работе с файлами'''
 
-    def __init__(self, filename=DATA_FILENAME):
+    def __init__(self, filename: str = DATA_FILENAME) ->None:
         logging_filename.info("Старт инициализации")
         """Инициализация объекта который взаимодействует с файлами"""
 
         self.__filename = filename
         logging_filename.info("Завершение инициализации")
 
-    def write_data(self, data):
+    def write_data(self, data: Any) -> Any:
         '''метод который отвечает за внесение данных в json файл'''
 
         logging_filename.info(f"Пытаемся записать в {self.__filename} данные")
@@ -51,7 +53,7 @@ class FileWork(AbsFileWork):
         logging_filename.info(f"Данные в {self.__filename} записаны")
 
 
-    def take_data(self):
+    def take_data(self) -> list[dict[Any, Any]] -> list[dict[Any, Any]]:
         '''Метод который отвечает за получение данных из json-файла
          и возвращает полченные значения'''
 
@@ -62,20 +64,18 @@ class FileWork(AbsFileWork):
         return my_data
 
 
-    def deldata(self, data_to_del):
+    def deldata(self, data_to_del: dict[Any, Any]) -> Any:
         '''Метод для удаления данных в файле'''
 
         temp_data = self.take_data()
         if data_to_del in temp_data:
-            print(temp_data)
             temp_data.remove(data_to_del)
-            print(2222, temp_data)
 
         with open(self.__filename, 'w') as f:
             json.dump(temp_data, f, ensure_ascii=True)
 
 
-    def add_new_vacancy_to_json_file(self, vac_data):
+    def add_new_vacancy_to_json_file(self, vac_data: Vacancies) -> None:
         """Модуль добавляющий данные по новой вакансии в файл,
         если данных по этой ваканссии ранее н было добавлено"""
 

@@ -1,10 +1,11 @@
 import pytest
 import json
 import os
+from typing import Any
 
 from src.utils_filework import FileWork
 
-def test_take_data(json_data_1):
+def test_take_data(json_data_1: list[dict[Any, Any]]) -> None:
     '''Тест который принимает на вход текстуру и проверяет,
     что в файл запиисываются данные совпадающие с текстурой'''
 
@@ -17,7 +18,7 @@ def test_take_data(json_data_1):
     assert my_data == json_data_1
 
 
-def test_write_data(json_data_1):
+def test_write_data(json_data_1: list[dict[Any, Any]]) -> None:
     """Тестирует, что функция по записи данных в json файл работает коректно"""
 
     temp_file = 'mydata.json'
@@ -29,7 +30,7 @@ def test_write_data(json_data_1):
     assert my_data == json_data_1
 
 
-def test_delfunc():
+def test_delfunc() -> None:
     """Тестируем, что функция корректно удаляет данные из json-файла"""
 
     a = [{'ghb': {'1': 22}, 'перемен2': {'4': 5}}, {'4': 14, 'gg': 2}]
@@ -40,7 +41,7 @@ def test_delfunc():
     os.remove('mydata.json')
     assert test_data == [{'ghb': {'1': 22}, 'перемен2': {'4': 5}}]
 
-def test_adding_data_which_exist_in_json_file(json_data_3):
+def test_adding_data_which_exist_in_json_file(json_data_3: list[dict[Any, Any]]) -> None:
     '''Тестируем, что при при попытке добавить уже имеющую информацию в json-файл
     исходное содержимое не не измениться, а дубль не добавится'''
 

@@ -38,15 +38,17 @@ class HH(AbstractHH):
         logging_api.info(f'Инициализации объекта классса HH завершена, параметры {self.__params}') #логирование
 
 
-    def __str__(self):
+    def __str__(self)-> None:
         """Выыодит на печать информацию об объекте класса HH"""
         logging_api.info(f'Вызван на печать объект класса {self.__class__.__name__}, текущие парамметры: {self.__params} содержит {len(self.__vacancies)} вакансий')
         return f'Класс {self.__class__.__name__}, текущие парамметры: {self.__params} содержит {len(self.__vacancies)} вакансий'
 
-    def connection(self):
+    def connection(self) -> None:
+        '''Метод отвечающий за взаимодействие с приватным методом __connection'''
+
         HH.__connection(self)
 
-    def __connection(self):
+    def __connection(self) -> str:
         '''Метод который реадизует функционал подключения к серверу'''
 
         logging_api.info('Проводим подклчение к серверу')  # логирование

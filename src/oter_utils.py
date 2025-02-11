@@ -1,9 +1,10 @@
 from src.utils_vacancies import Vacancies
+from typing import Any
 
 class DataWork():
     '''вспомогательные функции предназначенные для упрощения работы прораммы'''
 
-    def sort_vacancies(self, vac_list):
+    def sort_vacancies(self, vac_list: list[Vacancies]) -> list[Vacancies]:
         '''Принимает на вход список объектов класса Vacancy и возвращает список отсортированные по верхнему пределу зарплаты'''
 
         sorted_list = sorted(vac_list, key = lambda x: x.salary['to'], reverse=True)
@@ -11,11 +12,11 @@ class DataWork():
         return sorted_list
 
 
-    def make_vacancy_object(self, vacation_data):
+    def make_vacancy_object(self, vacation_data: dict[Any, Any]) ->Vacancies:
         '''Формирует объект класса вакансии из списка полученного чрез API'''
         return Vacancies(vacation_data['name'], vacation_data['address'], vacation_data['salary'], vacation_data['alternate_url'], vacation_data['work_schedule_by_days'])
 
-    def make_data_to_json_from_vacancy_object_list(self, vacancy_list):
+    def make_data_to_json_from_vacancy_object_list(self, vacancy_list: list[Vacancies]) -> list[Any]:
         '''Формирует спиисок с данными подходящими для записи в json файл из
         списка объектов класса Json'''
 

@@ -26,7 +26,7 @@ def test_api_correct_work_take_data_from_api(get, capsys):
     assert myprint.out == 'Обнаружена ошибка при подлючении к серверу, код ошибки: 400\n'
 
 @patch("src.utils_api.requests.get")
-def test_api_correct_work_take_data_from_api(get, capsys):
+def test_api_correct_work_take_data_from_api2(get, capsys):
     '''Мокирующий тест, который проверяет, что функция search_vacancion возвращает
     на экран сообщение соответствующее ожидаемым'''
 
