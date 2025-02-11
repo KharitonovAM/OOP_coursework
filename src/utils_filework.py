@@ -1,7 +1,7 @@
 import json
 import logging
-import os
 from abc import ABC, abstractmethod
+from pathlib import Path
 from typing import Any
 
 from setting.log_setting import my_log_config
@@ -16,22 +16,22 @@ logging_filename = logging.getLogger("utils_filework")
 class AbsFileWork(ABC):
 
     @abstractmethod
-    def take_data(self) -> None:
+    def take_data(self):
         pass
 
     @abstractmethod
-    def write_data(self) -> None:
+    def write_data(self):
         pass
 
     @abstractmethod
-    def deldata(self) -> None:
+    def deldata(self):
         pass
 
 
 class FileWork(AbsFileWork):
     """Класс по работе с файлами"""
 
-    def __init__(self, filename: str = DATA_FILENAME) -> None:
+    def __init__(self, filename: Path = DATA_FILENAME) -> None:
         logging_filename.info("Старт инициализации")
         """Инициализация объекта который взаимодействует с файлами"""
 
@@ -46,7 +46,7 @@ class FileWork(AbsFileWork):
         try:
             data_from_file = self.take_data()
             data_from_file.extend(data)
-        except:
+        except Exception:
             data_from_file = data
         with open(self.__filename, "w") as f:
             json.dump(data_from_file, f, indent=4, ensure_ascii=True)

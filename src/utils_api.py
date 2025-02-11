@@ -44,9 +44,13 @@ class HH(AbstractHH):
     def __str__(self) -> None:
         """Выыодит на печать информацию об объекте класса HH"""
         logging_api.info(
-            f"Вызван на печать объект класса {self.__class__.__name__}, текущие парамметры: {self.__params} содержит {len(self.__vacancies)} вакансий"
+            f"Вызван на печать объект класса {self.__class__.__name__}, текущие парамметры:"
+            f" {self.__params} содержит {len(self.__vacancies)} вакансий"
         )
-        return f"Класс {self.__class__.__name__}, текущие парамметры: {self.__params} содержит {len(self.__vacancies)} вакансий"
+        return (
+            f"Класс {self.__class__.__name__}, текущие парамметры: "
+            f"{self.__params} содержит {len(self.__vacancies)} вакансий"
+        )
 
     def connection(self) -> None:
         """Метод отвечающий за взаимодействие с приватным методом __connection"""
@@ -80,7 +84,7 @@ class HH(AbstractHH):
                     vacancies = response.json()["items"]
                     self.__vacancies.extend(vacancies)
                     self.__params["page"] += 1
-                except:
+                except Exception:
                     print(
                         f"Работа поиска завершена, всего найдено {len(self.__vacancies)} вакансий"
                     )

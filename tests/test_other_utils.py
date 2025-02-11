@@ -1,7 +1,5 @@
 from typing import Any
 
-import pytest
-
 from src.oter_utils import DataWork
 from src.utils_vacancies import Vacancies
 

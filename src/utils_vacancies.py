@@ -1,6 +1,6 @@
 import logging
 from abc import ABC, abstractmethod
-from typing import Any, Union
+from typing import Any
 
 from setting.log_setting import my_log_config
 
@@ -44,7 +44,8 @@ class Vacancies:
         """Инициализация объекта класса Vacancies"""
 
         vacancy_log.info(
-            f"Старт инициализации объекта класса Vacancies c входными данными {name}, {address}, {salary}, {vacancies_url}, {work_format}"
+            f"Старт инициализации объекта класса Vacancies c"
+            f" входными данными {name}, {address}, {salary}, {vacancies_url}, {work_format}"
         )
         self.name = name
         self.address = address
@@ -57,7 +58,10 @@ class Vacancies:
 
     def __str__(self) -> str:
         """метод который определяет результат функции print для объекта классса Vacancies"""
-        return f"Объект класса Vacancies {self.name}, {self.address}, {self.salary}, {self.vacancies_url}, {self.work_format} "
+        return (
+            f"Объект класса Vacancies {self.name}, {self.address}, "
+            f"{self.salary}, {self.vacancies_url}, {self.work_format} "
+        )
 
     def __sub__(self, vac2) -> int:
         """Магический метод вычитания двух вакансий"""
@@ -86,7 +90,7 @@ class Vacancies:
                 pass
             else:
                 self.salary["from"] = 0
-        except:
+        except Exception:
             self.salary["from"] = 0
         vacancy_log.info(
             f"Валидация запрлаты по нижнему значению проведена, по выходу {self.salary['from']}"
@@ -106,7 +110,7 @@ class Vacancies:
                 pass
             else:
                 self.salary["to"] = self.salary["from"]
-        except:
+        except Exception:
             self.salary["to"] = self.salary["from"]
         vacancy_log.info(
             f"Валидация запрлаты по верхнему значению проведена, по выходу {self.salary['to']}"
@@ -114,7 +118,8 @@ class Vacancies:
 
     @staticmethod
     def check_object_class(test_object: Any) -> None:
-        """Проверяет принадлежность объекта к классу Вакансии и возбуждает исключение если объект не соответствует классу"""
+        """Проверяет принадлежность объекта к классу Вакансии
+        и возбуждает исключение если объект не соответствует классу"""
 
         if isinstance(test_object, Vacancies) is False:
             raise TypeError("Выбран объект не подходящего классса")

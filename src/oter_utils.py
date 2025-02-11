@@ -7,7 +7,8 @@ class DataWork:
     """вспомогательные функции предназначенные для упрощения работы прораммы"""
 
     def sort_vacancies(self, vac_list: list[Vacancies]) -> list[Vacancies]:
-        """Принимает на вход список объектов класса Vacancy и возвращает список отсортированные по верхнему пределу зарплаты"""
+        """Принимает на вход список объектов класса Vacancy и возвращает
+        список отсортированные по верхнему пределу зарплаты"""
 
         sorted_list = sorted(vac_list, key=lambda x: x.salary["to"], reverse=True)
 

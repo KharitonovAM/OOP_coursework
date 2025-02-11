@@ -2,8 +2,6 @@ import json
 import os
 from typing import Any
 
-import pytest
-
 from src.utils_filework import FileWork
 
 
