@@ -23,7 +23,7 @@ class AbstractHH(ABC):
         pass
 
     @abstractmethod
-    def search_vacancion(self):
+    def search_vacancion(self, keyword:str):
         pass
 
 

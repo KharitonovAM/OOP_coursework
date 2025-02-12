@@ -20,11 +20,11 @@ class AbsFileWork(ABC):
         pass
 
     @abstractmethod
-    def write_data(self):
+    def write_data(self, data: Any):
         pass
 
     @abstractmethod
-    def deldata(self):
+    def deldata(self, data_to_del: dict[Any, Any]):
         pass
 
 

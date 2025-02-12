@@ -14,10 +14,6 @@ class abstract_vacancies(ABC):
     """Абстрактный класс для работы с вакансииями"""
 
     @abstractmethod
-    def vacancy_data(self):
-        pass
-
-    @abstractmethod
     def __str__(self):
         pass
 
@@ -30,7 +26,7 @@ class abstract_vacancies(ABC):
         pass
 
     @abstractmethod
-    def compare_jobs(self):
+    def compare_jobs(self, vac2: Vacancies):
         pass
 
 
