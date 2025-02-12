@@ -33,7 +33,6 @@ def main() -> None:
         )
         vacansy_object = HH()
         vacansy_list = vacansy_object.search_vacancion(lookihg_word)
-        print(lookihg_word)
         vacansy_object_list = list(
             map(other_functions.make_vacancy_object, vacansy_list)
         )
@@ -41,7 +40,6 @@ def main() -> None:
         user_sorted = input(
             "Отсортировать полученный список по зарплате? (от наибольшей к наименьшей) y/n\n"
         )
-        print("user_sorted --- ", user_sorted)
         while user_sorted.lower() not in ("y", "n"):
             user_sorted = input(
                 "Вы ввели неверный вариант, повторите пожалуйста ввод\n"
@@ -52,7 +50,6 @@ def main() -> None:
             """Какое количество вакансий вы хотите просмотреть?
          Если хотите просмотреть все вакансии - введите любой нечисловой символ\n"""
         )
-        print("number_vacancies---", number_vacancies)
         if (
             number_vacancies.isdigit() is False
             or int(number_vacancies) < 0
@@ -61,7 +58,6 @@ def main() -> None:
             number_vacancies = len(vacansy_object_list)
         vacansy_object_list = vacansy_object_list[:number_vacancies]
         print_before_saving = input("Вывести список на экран? (Y/N)")
-        print("print_before_saving----", print_before_saving)
         while print_before_saving.lower() not in ("y", "n"):
             print_before_saving = input(
                 "Вы ввели неверный вариант, повторите пожалуйста ввод\n"

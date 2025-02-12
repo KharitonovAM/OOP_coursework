@@ -1,5 +1,6 @@
 import logging
 from abc import ABC, abstractmethod
+from typing import Any
 
 import requests
 
@@ -41,7 +42,7 @@ class HH(AbstractHH):
             f"Инициализации объекта классса HH завершена, параметры {self.__params}"
         )  # логирование
 
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         """Выыодит на печать информацию об объекте класса HH"""
         logging_api.info(
             f"Вызван на печать объект класса {self.__class__.__name__}, текущие парамметры:"
@@ -57,7 +58,7 @@ class HH(AbstractHH):
 
         HH.__connection(self)
 
-    def __connection(self) -> str:
+    def __connection(self) -> int:
         """Метод который реадизует функционал подключения к серверу"""
 
         logging_api.info("Проводим подклчение к серверу")  # логирование
@@ -67,7 +68,7 @@ class HH(AbstractHH):
         )  # логирование
         return response.status_code
 
-    def search_vacancion(self, keyword):
+    def search_vacancion(self, keyword:str) ->list[Any]:
         """Производит поиск на сайте hh.ru вакансий, которые содержат искомый текст"""
 
         logging_api.info(f"Старт сбора вакансий по тексту {keyword}")  # логирование

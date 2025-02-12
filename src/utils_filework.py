@@ -38,7 +38,7 @@ class FileWork(AbsFileWork):
         self.__filename = filename
         logging_filename.info("Завершение инициализации")
 
-    def write_data(self, data: Any) -> Any:
+    def write_data(self, data: Any) -> None:
         """метод который отвечает за внесение данных в json файл"""
 
         logging_filename.info(f"Пытаемся записать в {self.__filename} данные")
@@ -62,7 +62,7 @@ class FileWork(AbsFileWork):
             logging_filename.info(f"Данные из {self.__filename} прочитаны")
         return my_data
 
-    def deldata(self, data_to_del: dict[Any, Any]) -> Any:
+    def deldata(self, data_to_del: dict[Any, Any]) -> None:
         """Метод для удаления данных в файле"""
 
         temp_data = self.take_data()
