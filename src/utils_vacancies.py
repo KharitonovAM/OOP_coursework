@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import logging
 from abc import ABC, abstractmethod
 from typing import Any
@@ -124,7 +126,7 @@ class Vacancies:
         if isinstance(test_object, Vacancies) is False:
             raise TypeError("Выбран объект не подходящего классса")
 
-    def compare_jobs(self, vac2):
+    def compare_jobs(self, vac2: Vacancies) -> Vacancies:
         """Принимает две объекта класса вакансии и возвращает ту. у которой более высокая максмальная зарплата"""
 
         Vacancies.check_object_class(vac2)
